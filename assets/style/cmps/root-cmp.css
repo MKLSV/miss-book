@@ -1,0 +1,7 @@
+.app-nav{
+    display: flex;
+    gap: 10px;
+}
+.nav:hover{
+    color:rgb(185, 134, 195)
+}
