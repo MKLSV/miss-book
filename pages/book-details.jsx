@@ -2,9 +2,8 @@ import { LongTxt } from "../cmps/book-text.jsx"
 
 
 export function BookDetails({ selectedBook }) {
-    console.log(selectedBook)
     const { amount, currencyCode, isOnSale } = selectedBook.listPrice
-
+    
     let priceClass
     let pageCount
 

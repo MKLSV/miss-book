@@ -20,6 +20,11 @@
     padding: 15px;
 }
 
+.preview-btns {
+    display: grid;
+    grid-template-columns: 1fr 50px;
+}
+
 .info {
     display: flex;
     flex-direction: column;

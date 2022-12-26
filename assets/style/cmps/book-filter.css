@@ -1,0 +1,8 @@
+.book-filter{
+    background-color: rgb(183, 147, 194);
+    padding: 10px;
+}
+.filters{
+    display: grid;
+    grid-template-columns: 100px 200px
+}
