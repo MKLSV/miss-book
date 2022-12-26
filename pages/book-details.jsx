@@ -1,9 +1,9 @@
 import { LongTxt } from "../cmps/book-text.jsx"
 
 
-export function BookDetails({ selectedBook }) {
+export function BookDetails({ selectedBook, onGoBack }) {
     const { amount, currencyCode, isOnSale } = selectedBook.listPrice
-    
+
     let priceClass
     let pageCount
 
@@ -28,6 +28,7 @@ export function BookDetails({ selectedBook }) {
             <a className="selected-subtitle">{selectedBook.subtitle}</a>
             <a className={priceClass}>{amount} {currencyCode}</a>
             {isOnSale && <a className="sale">On Sale!</a>}
+        <button onClick={onGoBack}>Go Back</button>
         </div>
 
         <div className="about-book">
@@ -45,7 +46,7 @@ export function BookDetails({ selectedBook }) {
             </ul>
             <hr></hr>
             <a className="bold">Description:</a>
-            <LongTxt text={selectedBook.description} />
+            <LongTxt text={selectedBook.description} length={100} />
         </div>
 
     </section>

@@ -1,15 +1,19 @@
 const { useState } = React
 
-export function LongTxt({ text }) {
+export function LongTxt({ text, length }) {
+    console.log(text, length)
+    const [isLongTxtShown, setLongTxtShown] = useState(false)
 
-    const [destraction, more] = useState(text)
-
-    function onMore() {
-        more(text.repeat(30))
+    function getTxtToShow(isLongTxtShown, text, length) {
+        return (text.length < length || isLongTxtShown) ? text : text.substring(0, length + 1) + '...'
     }
 
-    return <div className="text">
-        <a>{destraction} </a>
-        <a className="more"href="#" onClick={onMore}>show more...</a>
+    function onToggleLongTxt() {
+        setLongTxtShown((prevLongTxtShown) => !prevLongTxtShown)
+    }
+
+    return <div>
+        <p>{getTxtToShow(isLongTxtShown, text, length)}</p>
+        {text.length > length && <button onClick={onToggleLongTxt}>{isLongTxtShown ? 'Read Less' : 'Read More'}</button>}
     </div>
 }
