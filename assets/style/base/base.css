@@ -8,6 +8,7 @@ html {
 body {
   margin: 0;
   color: var(--gray3);
+  background-color: rgb(229, 233, 234);
 }
 
 h1,

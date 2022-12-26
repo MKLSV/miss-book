@@ -1,0 +1,36 @@
+.selected{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    /* padding: 0 100px; */
+    justify-content: space-around;
+}
+.preview{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+}
+.about-book{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+}
+.high-price{
+    color:red
+}
+.low-price{
+    color: rgb(0, 203, 0);
+}
+.selected-img{
+    width: 200px;
+}
+.more{
+    color: rgb(149, 110, 208);
+}
+.bold{
+    font-weight: bold;
+}
