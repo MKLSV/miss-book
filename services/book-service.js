@@ -8,7 +8,8 @@ export const bookService = {
   query,
   get,
   getDefaultFilter,
-  remove
+  remove,
+  getEmptyBook
 }
 
 function query(filterBy = getDefaultFilter()) {
@@ -34,7 +35,7 @@ function remove(bookId) {
 }
 
 function getEmptyBook(title = '', listPrice = 0) {
-  return { id: '', title, listPrice }
+  return { id: '', title, listPrice ,img:'https://picsum.photos/100/150'}
 }
 
 function getDefaultFilter() {
@@ -44,7 +45,7 @@ function getDefaultFilter() {
 function _createBook(title, listPrice) {
   const book = getEmptyBook(title, listPrice)
   book.id = utilService.makeId()
-  book.img = 'https://picsum.photos/100/150'
+  // book.img = 'https://picsum.photos/100/150'
   return book
 }
 

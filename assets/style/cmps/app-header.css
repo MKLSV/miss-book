@@ -3,7 +3,10 @@
   color: var(--clr1bg);
   padding: 1em;
 }
-
+.active{
+  color: rgb(245, 156, 242);
+  font-weight: bold;
+}
 @media(max-width: 720px) {
   .app-header {
     color: var(--clr2bg);

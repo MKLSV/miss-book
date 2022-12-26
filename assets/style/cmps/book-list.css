@@ -38,3 +38,26 @@
 .sale {
     color: red;
 }
+
+.add-book {
+    display: block;
+    padding: 15px;
+    background-color: aquamarine;
+    text-align: center;
+    border-bottom: 1px solid rgb(151, 151, 151);
+}
+.add-book:hover{
+    background-color: rgb(106, 212, 177);
+}
+.select-btn{
+    margin: auto;
+    background-color: #e9cedd;
+    padding: 4px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.select-btn:hover{
+    background-color: rgb(98, 88, 88);
+    color: aliceblue;
+
+}
