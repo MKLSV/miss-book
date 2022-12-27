@@ -1,5 +1,6 @@
 const { useParams, useNavigate } = ReactRouterDOM
 const { useState, useEffect } = React
+const { Link } = ReactRouterDOM
 
 import { LongTxt } from "../cmps/book-text.jsx"
 import { bookService } from "../services/book-service.js"
@@ -55,6 +56,7 @@ export function BookDetails() {
             <a className="selected-subtitle">{book.subtitle}</a>
             <a className={priceClass()}>{book.listPrice.amount} {book.listPrice.currencyCode}</a>
             {book.listPrice.isOnSale && <a className="sale">On Sale!</a>}
+            <Link className="edit-btn" to={`/book/edit/${book.id}`}>Edit</Link>
             <button onClick={onGoBack}>Go Back</button>
         </div>
 

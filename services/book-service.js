@@ -14,7 +14,6 @@ export const bookService = {
 
 function query(filterBy = getDefaultFilter()) {
   return storageService.query(BOOK_KEY).then(books => {
-    console.log(filterBy)
     if (filterBy.title) {
       const regex = new RegExp(filterBy.title, 'i')
       books = books.filter(book => regex.test(book.title))
@@ -34,8 +33,13 @@ function remove(bookId) {
   return storageService.remove(BOOK_KEY, bookId)
 }
 
-function getEmptyBook(title = '', listPrice = 0) {
-  return { id: '', title, listPrice ,img:'https://picsum.photos/100/150'}
+function getEmptyBook(title = '', price='') {
+  return {
+    id: utilService.makeId(),
+    title,
+    price,
+    img: 'https://picsum.photos/100/150'
+  }
 }
 
 function getDefaultFilter() {
